@@ -8,14 +8,15 @@ url: "https://beryl416.github.io"
 github_username: beryl416
 
 # Build settings
-theme: minima
+theme: no-style-please
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Minima theme settings
-minima:
-  skin: dark
+# Theme settings
+theme_config:
+  appearance: "auto"
+  back_home_text: "← home"
   date_format: "%Y-%m-%d"
 
 # Markdown settings
