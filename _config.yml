@@ -28,7 +28,6 @@ kramdown:
 paginate: 10
 paginate_path: "/page/:num/"
 show_excerpts: true
-future: true
 
 # Exclude from processing
 exclude:
