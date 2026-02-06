@@ -2,6 +2,3 @@ entries:
   - title: blog
     post_list: true
     url: false
-
-  - title: about
-    url: /about
