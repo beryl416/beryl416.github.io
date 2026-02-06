@@ -3,8 +3,7 @@
   <div class="post-list">
     {% for post in posts %}
       <div class="post-item">
-        <span class="post-date">{{ post.date | date: site.theme_config.date_format }}</span>
-        <a class="post-title-link" href="{{ post.url }}">{{ post.title }}</a>
+        <a class="post-title-link" href="{{ post.url }}">{{ forloop.index | prepend: '00' | slice: -2, 2 }}. {{ post.title }}</a>
       </div>
     {% endfor %}
   </div>
