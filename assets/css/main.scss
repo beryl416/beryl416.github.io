@@ -42,8 +42,7 @@ h3 {
 
 a {
   color: #111;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
 
   &:hover {
     color: #111;
@@ -179,7 +178,7 @@ li {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  margin-top: 3rem;
+  margin-top: 6rem;
   font-size: 0.85rem;
 }
 
