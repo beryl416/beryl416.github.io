@@ -1,8 +1,7 @@
 # Site settings
-title: Nominho's Dev Blog
+title: beryl416
 email: ""
-description: >-
-  개발 경험과 기술을 기록하는 블로그입니다.
+description: ""
 baseurl: ""
 url: "https://beryl416.github.io"
 github_username: beryl416
