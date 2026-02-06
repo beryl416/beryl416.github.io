@@ -23,10 +23,10 @@ claude
 그리고 이렇게 질문해:
 
 ```
-> give me an overview of this codebase
-> explain the main architecture patterns used here
-> what are the key data models?
-> how is authentication handled?
+> 이 코드베이스 전체 개요를 알려줘
+> 여기서 사용하는 주요 아키텍처 패턴을 설명해줘
+> 핵심 데이터 모델이 뭐야?
+> 인증은 어떻게 처리돼?
 ```
 
 넓은 질문으로 시작해서 점점 좁혀나가는 게 좋아. "이 프로젝트에서 쓰는 용어 정리해줘"라고 하면 용어집도 만들어줘.
@@ -36,9 +36,9 @@ claude
 특정 기능과 관련된 코드를 찾아야 할 때:
 
 ```
-> find the files that handle user authentication
-> how do these authentication files work together?
-> trace the login process from front-end to database
+> 사용자 인증을 처리하는 파일들을 찾아줘
+> 이 인증 파일들이 어떻게 함께 작동해?
+> 로그인 과정을 프론트엔드부터 데이터베이스까지 추적해줘
 ```
 
 찾고 싶은 것을 **구체적으로** 설명하고, 프로젝트에서 쓰는 용어를 그대로 쓰면 더 잘 찾아줘.
@@ -48,19 +48,19 @@ claude
 에러가 나타났을 때, Claude한테 그대로 보여주면 돼:
 
 ```
-> I'm seeing an error when I run npm test
+> npm test를 실행하면 에러가 나
 ```
 
 Claude가 원인을 분석하고 수정 방법을 제안해줘:
 
 ```
-> suggest a few ways to fix the @ts-ignore in user.ts
+> user.ts에 있는 @ts-ignore를 고칠 방법 몇 가지 제안해줘
 ```
 
 마음에 드는 방법을 선택하면:
 
 ```
-> update user.ts to add the null check you suggested
+> user.ts에 네가 제안한 null 체크를 추가해줘
 ```
 
 스택 트레이스(에러 메시지 전체)를 Claude에게 보여주고, 에러가 항상 나는지 가끔 나는지 알려주면 더 정확하게 고쳐줘.
@@ -70,10 +70,10 @@ Claude가 원인을 분석하고 수정 방법을 제안해줘:
 오래된 코드를 최신 방식으로 바꾸고 싶을 때:
 
 ```
-> find deprecated API usage in our codebase
-> suggest how to refactor utils.js to use modern JavaScript features
-> refactor utils.js to use ES2024 features while maintaining the same behavior
-> run tests for the refactored code
+> 코드베이스에서 더 이상 사용되지 않는 API 사용을 찾아줘
+> utils.js를 최신 JavaScript 기능으로 리팩토링하는 방법을 제안해줘
+> utils.js를 같은 동작을 유지하면서 ES2024 기능으로 리팩토링해줘
+> 리팩토링한 코드의 테스트를 실행해줘
 ```
 
 한 번에 너무 많이 바꾸지 말고, **작은 단위로 나눠서** 리팩토링하고 매번 테스트를 돌리는 게 안전해.
@@ -91,14 +91,14 @@ Claude가 원인을 분석하고 수정 방법을 제안해줘:
 Claude는 알아서 적절한 Subagent에게 일을 맡기기도 해:
 
 ```
-> review my recent code changes for security issues
-> run all tests and fix any failures
+> 내 최근 코드 변경사항에서 보안 문제를 검토해줘
+> 모든 테스트를 실행하고 실패하는 것들을 고쳐줘
 ```
 
 직접 지정할 수도 있어:
 
 ```
-> use the code-reviewer subagent to check the auth module
+> code-reviewer subagent를 사용해서 auth 모듈을 검토해줘
 ```
 
 나만의 Subagent도 만들 수 있어. `/agents`를 실행하고 "Create New subagent"를 선택하면, 이름, 설명, 사용할 도구, 역할을 정의할 수 있어. `.claude/agents/` 폴더에 저장하면 팀원들과 공유도 돼.
@@ -126,21 +126,21 @@ claude --permission-mode plan
 **바로 질문하기**:
 
 ```bash
-claude --permission-mode plan -p "Analyze the authentication system and suggest improvements"
+claude --permission-mode plan -p "인증 시스템을 분석하고 개선점을 제안해줘"
 ```
 
 ### 예시
 
 ```
-> I need to refactor our authentication system to use OAuth2.
-> Create a detailed migration plan.
+> 인증 시스템을 OAuth2로 리팩토링해야 해.
+> 상세한 마이그레이션 계획을 세워줘.
 ```
 
 Claude가 현재 코드를 분석하고 계획을 세워줘. 후속 질문으로 다듬을 수 있어:
 
 ```
-> What about backward compatibility?
-> How should we handle database migration?
+> 하위 호환성은 어떻게 해?
+> 데이터베이스 마이그레이션은 어떻게 처리해야 해?
 ```
 
 `Ctrl+G`를 누르면 계획을 텍스트 편집기에서 직접 수정할 수도 있어.
@@ -161,10 +161,10 @@ Plan Mode를 기본으로 쓰고 싶으면:
 테스트가 없는 코드에 테스트를 추가해야 할 때:
 
 ```
-> find functions in NotificationsService.swift that are not covered by tests
-> add tests for the notification service
-> add test cases for edge conditions in the notification service
-> run the new tests and fix any failures
+> NotificationsService.swift에서 테스트가 없는 함수들을 찾아줘
+> 알림 서비스에 테스트를 추가해줘
+> 알림 서비스의 엣지 케이스에 대한 테스트를 추가해줘
+> 새 테스트를 실행하고 실패하는 것들을 고쳐줘
 ```
 
 Claude는 프로젝트에 이미 있는 테스트 스타일을 보고 **같은 패턴**으로 테스트를 만들어줘. 테스트 프레임워크, 어설션 방식, 파일 구조까지 맞춰서.
@@ -184,9 +184,9 @@ Claude는 프로젝트에 이미 있는 테스트 스타일을 보고 **같은 �
 단계별로 하고 싶으면:
 
 ```
-> summarize the changes I've made to the authentication module
-> create a pr
-> enhance the PR description with more context about the security improvements
+> 내가 인증 모듈에 만든 변경사항을 요약해줘
+> PR을 만들어줘
+> 보안 개선에 대한 더 많은 맥락으로 PR 설명을 보강해줘
 ```
 
 `gh pr create`로 PR을 만들면 세션이 자동으로 그 PR에 연결돼. 나중에 `claude --from-pr 123`으로 이어서 작업할 수 있어.
@@ -196,10 +196,10 @@ Claude는 프로젝트에 이미 있는 테스트 스타일을 보고 **같은 �
 코드에 문서를 추가해야 할 때:
 
 ```
-> find functions without proper JSDoc comments in the auth module
-> add JSDoc comments to the undocumented functions in auth.js
-> improve the generated documentation with more context and examples
-> check if the documentation follows our project standards
+> auth 모듈에서 JSDoc 주석이 없는 함수들을 찾아줘
+> auth.js에서 문서화되지 않은 함수들에 JSDoc 주석을 추가해줘
+> 생성된 문서에 더 많은 맥락과 예제를 추가해서 개선해줘
+> 문서가 우리 프로젝트 기준에 맞는지 확인해줘
 ```
 
 원하는 문서 스타일(JSDoc, docstrings 등)을 지정하고, 예제를 포함해달라고 하면 더 좋은 문서가 나와.
@@ -214,9 +214,9 @@ Claude는 이미지도 이해할 수 있어. 에러 스크린샷, UI 디자인, 
 3. 경로를 직접 알려주기: "Analyze this image: /path/to/image.png"
 
 ```
-> Here's a screenshot of the error. What's causing it?
-> This is our current database schema. How should we modify it?
-> Generate CSS to match this design mockup
+> 에러 스크린샷이야. 원인이 뭐야?
+> 현재 데이터베이스 스키마야. 어떻게 수정해야 해?
+> 이 디자인 목업에 맞는 CSS를 만들어줘
 ```
 
 텍스트로 설명하기 어려운 것(에러 화면, UI 디자인, 다이어그램)은 이미지를 보여주는 게 훨씬 빨라.
@@ -226,14 +226,14 @@ Claude는 이미지도 이해할 수 있어. 에러 스크린샷, UI 디자인, 
 `@`를 쓰면 파일이나 디렉토리를 빠르게 참조할 수 있어:
 
 ```
-> Explain the logic in @src/utils/auth.js
-> What's the structure of @src/components?
+> @src/utils/auth.js의 로직을 설명해줘
+> @src/components의 구조가 어떻게 돼?
 ```
 
 MCP 리소스도 참조 가능해:
 
 ```
-> Show me the data from @github:repos/owner/repo/issues
+> @github:repos/owner/repo/issues에서 데이터를 보여줘
 ```
 
 한 메시지에서 여러 파일을 참조할 수도 있어: `@file1.js and @file2.js`
@@ -356,11 +356,11 @@ cat log.txt | claude -p 'parse this log file for errors' --output-format stream-
 Claude는 자기 자신의 문서에 접근할 수 있어서, Claude Code의 기능이나 사용법에 대해 물어보면 바로 답해줘:
 
 ```
-> can Claude Code create pull requests?
-> how does Claude Code handle permissions?
-> what skills are available?
-> how do I use MCP with Claude Code?
-> what are the limitations of Claude Code?
+> Claude Code로 pull request 만들 수 있어?
+> Claude Code가 권한을 어떻게 처리해?
+> 사용 가능한 skill이 뭐가 있어?
+> Claude Code에서 MCP를 어떻게 써?
+> Claude Code의 제한 사항이 뭐야?
 ```
 
 항상 최신 문서를 기반으로 답해줘. 구체적으로 물어볼수록 자세한 답을 줘.
