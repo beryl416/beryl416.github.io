@@ -1,10 +1,37 @@
-{% if site.posts.size > 0 %}
+{% assign posts = paginator.posts | default: site.posts %}
+{% if posts.size > 0 %}
   <div class="post-list">
-    {% for post in site.posts %}
+    {% for post in posts %}
       <div class="post-item">
         <span class="post-date">{{ post.date | date: site.theme_config.date_format }}</span>
         <a class="post-title-link" href="{{ post.url }}">{{ post.title }}</a>
       </div>
     {% endfor %}
   </div>
+
+  {% if paginator.total_pages > 1 %}
+    <nav class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">&laquo; 이전</a>
+      {% else %}
+        <span class="disabled">&laquo; 이전</span>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="current">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="/">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">다음 &raquo;</a>
+      {% else %}
+        <span class="disabled">다음 &raquo;</span>
+      {% endif %}
+    </nav>
+  {% endif %}
 {% endif %}
