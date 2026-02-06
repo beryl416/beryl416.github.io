@@ -137,11 +137,14 @@ pre {
 table {
   width: 100%;
   margin: 1.5rem 0;
+  border-collapse: collapse;
+  border: none;
 }
 
 th, td {
   padding: 0.5rem 0.8rem;
   text-align: left;
+  border: none;
   border-bottom: 1px solid #eee;
 }
 
