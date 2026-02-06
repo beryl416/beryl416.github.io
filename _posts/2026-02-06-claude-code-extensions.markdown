@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code 확장하기"
+title: "[Claude Code] 확장하기"
 date: 2026-02-06 17:00:00 +0900
 categories: ai
 ---

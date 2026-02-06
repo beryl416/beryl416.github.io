@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code 창시자가 알려주는 10가지 팁"
+title: "[Claude Code] 창시자가 알려주는 10가지 팁"
 date: 2026-02-06 20:00:00 +0900
 categories: ai
 ---

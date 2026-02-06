@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code 작동 방식"
+title: "[Claude Code] 작동 방식"
 date: 2026-02-06 16:00:00 +0900
 categories: ai
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code 일반적인 워크플로우"
+title: "[Claude Code] 일반적인 워크플로우"
 date: 2026-02-06 18:00:00 +0900
 categories: ai
 ---

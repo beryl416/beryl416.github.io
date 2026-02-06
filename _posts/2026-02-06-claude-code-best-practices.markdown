@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code 모범 사례"
+title: "[Claude Code] 모범 사례"
 date: 2026-02-06 19:00:00 +0900
 categories: ai
 ---
