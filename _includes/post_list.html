@@ -1,0 +1,10 @@
+{% if site.posts.size > 0 %}
+  <div class="post-list">
+    {% for post in site.posts %}
+      <div class="post-item">
+        <span class="post-date">{{ post.date | date: site.theme_config.date_format }}</span>
+        <a class="post-title-link" href="{{ post.url }}">{{ post.title }}</a>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
