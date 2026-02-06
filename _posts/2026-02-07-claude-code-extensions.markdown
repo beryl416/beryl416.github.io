@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code 확장하기"
-date: 2026-02-06
+date: 2026-02-07
 categories: ai
 ---
 
