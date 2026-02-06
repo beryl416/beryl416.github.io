@@ -27,7 +27,7 @@ Claude에게 "이거 고쳐줘"라고 부탁하면, 세 단계로 일해.
 
 이 세 단계를 **빙글빙글 반복**해. 한 번에 안 되면 다시 살펴보고, 다시 고치고, 다시 확인해. 될 때까지.
 
-![Claude Code 에이전트 루프](https://mintcdn.com/claude-code/ELkJZG54dIaeldDC/images/agentic-loop.svg?w=1100&fit=max&auto=format&n=ELkJZG54dIaeldDC&q=85&s=73b2a7040c4c93821c4d5bbee9f4a2d4)
+![Claude Code 에이전트 루프](/assets/images/agentic-loop-kr.jpeg)
 
 ## Claude Code가 할 수 있는 것들
 
@@ -64,6 +64,14 @@ Claude가 파일을 고치기 전에 원래 모습을 저장해둬. 게임에서
 기본적으로 Claude는 뭔가를 하기 전에 "이거 해도 돼?"하고 물어봐. 파일을 고치거나 명령어를 실행하기 전에 꼭 허락을 받아.
 
 만약 Claude를 많이 믿으면, "파일은 맘대로 고쳐도 돼"라고 설정할 수도 있어. 반대로 "보기만 해, 고치지 마"라고 할 수도 있어.
+
+## 대화를 이어가거나 새로 시작하거나
+
+Claude와 대화하다가 터미널을 닫아도 대화 내용은 저장돼. `claude --continue`라고 치면 아까 하던 대화를 이어갈 수 있어. 마치 책갈피를 끼워둔 것처럼.
+
+그리고 `claude --fork-session`이라고 치면, 지금까지의 대화를 복사해서 새로운 대화를 시작할 수 있어. 원래 대화는 그대로 남아있고, 새 대화에서 다른 방법을 시도해볼 수 있지.
+
+![세션 연속성](/assets/images/session-continuity-kr.jpeg)
 
 ## CLAUDE.md — Claude한테 주는 메모장
 
