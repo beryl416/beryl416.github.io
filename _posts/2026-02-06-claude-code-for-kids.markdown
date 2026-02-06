@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code가 뭐야? 초등학생도 알 수 있게 설명해볼게"
+title: "Claude Code 작동 방식"
 date: 2026-02-06
 categories: ai
 ---
