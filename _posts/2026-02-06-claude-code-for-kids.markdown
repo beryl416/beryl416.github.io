@@ -27,6 +27,8 @@ Claude에게 "이거 고쳐줘"라고 부탁하면, 세 단계로 일해.
 
 이 세 단계를 **빙글빙글 반복**해. 한 번에 안 되면 다시 살펴보고, 다시 고치고, 다시 확인해. 될 때까지.
 
+![Claude Code 에이전트 루프](https://mintcdn.com/claude-code/ELkJZG54dIaeldDC/images/agentic-loop.svg?w=1100&fit=max&auto=format&n=ELkJZG54dIaeldDC&q=85&s=73b2a7040c4c93821c4d5bbee9f4a2d4)
+
 ## Claude Code가 할 수 있는 것들
 
 Claude Code는 여러 가지 도구를 가지고 있어. 사람으로 치면 연필, 지우개, 돋보기 같은 거야.
