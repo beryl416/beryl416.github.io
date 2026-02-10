@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[GitHub Actions] CI 알아보기"
+title: "[GitHub] CI 알아보기"
 date: 2026-02-10 18:10:00 +0900
 categories: ai
 ---
