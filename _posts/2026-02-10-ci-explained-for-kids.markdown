@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[GitHub Actions] CI를 초등학생도 이해하게 설명해보기"
+title: "[GitHub Actions] CI란? 초등학생도 이해하는 자동 검사 로봇"
 date: 2026-02-10 18:10:00 +0900
 categories: ai
 ---
